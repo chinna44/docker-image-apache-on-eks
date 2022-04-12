@@ -1,6 +1,5 @@
 FROM centos:7
 MAINTAINER giridhar
-
 RUN yum update -y
 RUN yum install httpd -y
 COPY ./index.html /var/www/html/
