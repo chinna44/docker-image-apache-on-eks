@@ -1,5 +1,5 @@
 {
-    "family": FAMILY,
+    "family": mytaskdefinition,
     "containerDefinitions": [
         {
             "image": "REPOSITORY_URI:latest",
