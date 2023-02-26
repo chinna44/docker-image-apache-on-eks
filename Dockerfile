@@ -5,4 +5,4 @@ RUN apt-get install apache2 -y
 COPY ./index.html /var/www/html/
 COPY ./conf/vhost.conf /etc/httpd/conf.modules.d/
 EXPOSE 80
-ENTRYPOINT [“apache2ctl”, “-D”, “FOREGROUND”]
+ENTRYPOINT [“/usr/sbin/apachectl”, “start”]
