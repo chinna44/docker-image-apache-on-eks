@@ -1,8 +1,8 @@
-FROM centos:7
+FROM ubuntu
 MAINTAINER giridhar
-RUN yum update -y
-RUN yum install httpd -y
+RUN apt-get update
+RUN apt-get install apache2 -y
 COPY ./index.html /var/www/html/
 COPY ./conf/vhost.conf /etc/httpd/conf.modules.d/
 EXPOSE 80
-ENTRYPOINT ["/usr/sbin/httpd","-D","FOREGROUND"]
+ENTRYPOINT [“apache2ctl”, “-D”, “FOREGROUND”]
